@@ -1,6 +1,6 @@
 <!--index.wxml-->
 
-<van-transition wx:if="{{transition}}" name="slide-down" duration="400">
+<van-transition wx:if="{{transition}}" name="slide-down" duration="800">
 <van-row>
   <van-row custom-class="top-panel">
 
@@ -40,4 +40,4 @@
           </van-tab>
       </van-tabs>
   </van-row>
-  </van-transition>
+</van-transition>

@@ -1,54 +1,72 @@
-<van-transition wx:if="{{transition}}" name="slide-down" duration="400">
-  <van-row>
-    <van-row custom-class="top-panel">
-      <!--头像位置-->
-      <van-row class="info-block">
-        <van-col>
-          <text class="user-name"> {{userInfo.nickName}} </text>
-          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover">
-          </image>
-        </van-col>
-      </van-row>
+<van-transition wx:if="{{transition}}" name="slide-down" duration="800">
+    <van-row>
+        <van-row custom-class="top-panel">
+            <!--头像位置-->
+            <van-row class="info-block">
+                <van-col>
+                    <text class="user-name"> {{userInfo.nickName}}</text>
+                    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover">
+                    </image>
+                </van-col>
+            </van-row>
 
-      <van-row class="second-block">
-        <van-cell border="{{false}}" custom-class="cell-left">
-          <van-icon slot="icon" name="gold-coin" size="20px" class="balance-icon" />
-          <text slot="title" class="balance">余额</text>
-        </van-cell>
+            <van-row class="second-block">
+                <van-cell border="{{false}}" custom-class="cell-left">
+                    <van-icon slot="icon" name="gold-coin" size="20px" class="balance-icon"/>
+                    <text slot="title" class="balance">余额</text>
+                </van-cell>
 
-        <van-cell border="{{false}}" custom-class="cell-right">
-          <van-icon slot="icon" name="fire" size="20px" class="balance-icon" />
-          <text slot="title" class="balance">进展</text>
-        </van-cell>
-      </van-row>
+                <van-cell border="{{false}}" custom-class="cell-right">
+                    <van-icon slot="icon" name="fire" size="20px" class="balance-icon"/>
+                    <text slot="title" class="balance">进展</text>
+                </van-cell>
+            </van-row>
+        </van-row>
     </van-row>
-  </van-row>
+
+    <view style="padding-top:10px"></view>
+<van-transition wx:if="{{transition}}" name="slide-down" duration="{{duration + 100 }}">
+<van-cell title="我的朋友"
+          border=false
+          center=true
+          size="large"
+          icon="friends"
+          custom-class="setting-cell"></van-cell>
 </van-transition>
 
-<view style="padding-top:10px"/>
-<van-cell title="我的朋友"
-border=false
-center=true
-size="large"
-icon="friends"
- custom-class="setting-cell" />
-<van-cell title="我的回答" 
-icon="question"
-size="large"
-border=false
-custom-class="setting-cell" />
-<van-cell title="我的提问" 
-icon="award"
-border=false
-size="large"
-custom-class="setting-cell"/>
-<van-cell title="我的模型" 
-icon="manager"
-border=false
-size="large"
-custom-class="setting-cell"/>
-<van-cell title="时光脚步" 
-icon="manager"
-border=false
-size="large"
-custom-class="setting-cell"/>
+<van-transition wx:if="{{transition}}" name="slide-down" duration="{{duration + 200 }}">
+<van-cell title="我的回答"
+          icon="question"
+          size="large"
+          border=false
+          custom-class="setting-cell">
+          </van-cell>
+    </van-transition>
+
+<van-transition wx:if="{{transition}}" name="slide-down" duration="{{duration + 300 }}">
+<van-cell title="我的提问"
+          icon="award"
+          border=false
+          size="large"
+          custom-class="setting-cell"></van-cell>
+</van-transition>
+
+<van-transition wx:if="{{transition}}" name="slide-down" duration="{{duration + 400 }}">
+<van-cell title="我的模型"
+          icon="manager"
+          border=false
+          size="large"
+          custom-class="setting-cell"></van-cell>
+  </van-transition>        
+
+<van-transition wx:if="{{transition}}" name="slide-down" duration="{{duration + 500 }}">
+<van-cell title="时光脚步"
+          icon="manager"
+          border=false
+          size="large"
+          custom-class="setting-cell">
+          </van-cell>
+</van-transition>
+</van-transition>
+
+

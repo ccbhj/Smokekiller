@@ -54,10 +54,10 @@
 
 .cell-left {
 
-  background: linear-gradient(#56d7b3, #56e0ab) !important;
+    background: linear-gradient(#56d4b6, #56ddae) !important;
    position: absolute !important;
   width: 28% !important; 
-  margin-top: 42px;
+  margin-top: 42rpx;
   margin-left: 15%;
 }
 
@@ -74,20 +74,21 @@
 }
 
 .cell-right {
-    background: linear-gradient(#56d7b3, #56e0ab) !important;
+    background: linear-gradient(#56d4b6, #56ddae) !important;
   position: absolute !important;
   width: 28% !important;
   margin-left: 55%;
-  margin-top: 42px;
+  margin-top: 42rpx;
 }
 
 .second-block{
   padding-bottom:125px;
 }
 
+/**设置卡片**/
 .setting-cell {
   width: 98% !important;
-  box-shadow: 3px 3px 14px -3px;
+  box-shadow: 3px 3px 14px -5px;
   margin-bottom: 8px;
   border-radius: 8px; 
 }

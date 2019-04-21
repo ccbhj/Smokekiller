@@ -8,7 +8,8 @@ Page({
   data: {
     active: 0,
     userInfo: {},
-    transition: true
+    transition: true,
+    duration: 800
   },
 
   /**
