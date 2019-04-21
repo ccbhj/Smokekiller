@@ -1,0 +1,43 @@
+<!--index.wxml-->
+
+<van-transition wx:if="{{transition}}" name="slide-down" duration="400">
+<van-row>
+  <van-row custom-class="top-panel">
+
+    <!--头像位置-->
+    <van-col class="info-block" >
+      <van-button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </van-button>
+      <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </block>
+    </van-col>
+
+    <!--第二行文字“今天已抽多少”-->
+    <van-col class="today-already-block">
+      <text class="today-already-font">今天已抽 <text class="already-count-num">{{todayAlreadyCount}}</text> 支</text>
+    </van-col>
+
+    <!--第三行文字“今天总目标”-->
+    <van-col class="today-total-block">
+        <van-icon name="fire" color="#363640" size="32rpx"></van-icon>
+        <text class="total-count-num">{{todayTotalCount}}</text>
+        <text class="today-total-font">今天的目标</text>
+    </van-col>
+  </van-row>
+</van-row>
+
+<!--标签页-->
+  <van-row custom-class="tab-block">
+      <van-tabs active="{{ 1 }}" bind:change="onTabChange" nav-class="right-nav" tab-class="tab-class" tab-active-class="tab-active-class">
+          <van-tab
+                  wx:for= "{{tab_titles}}"
+                  wx:key="index"
+                  title="{{ item }}"
+          >
+              <view class="content">
+                  {{ item + '的内容' }}
+              </view>
+          </van-tab>
+      </van-tabs>
+  </van-row>
+  </van-transition>

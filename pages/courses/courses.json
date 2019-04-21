@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-transition": "../../dist/transition/index",
+    "i-sticky": "../../dist/sticky/index",
+    "i-sticky-item": "../../dist/sticky-item/index",
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index",
+    "i-card": "../../dist/icard/index",
+    "van-button": "../../dist/button/index"
+  }
+}

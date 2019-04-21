@@ -1,0 +1,43 @@
+<van-transition wx:if="{{transition}}" name="slide-down" duration="400">
+  <van-row>
+    <van-row custom-class="top-panel">
+
+      <!--头像位置-->
+      <van-col class="info-block">
+        <block wx>
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </block>
+      </van-col>
+
+      <!--第二行文字“共已学习多少”-->
+      <van-col class="today-already-block">
+        <text class="today-already-font">总共已学习 <text class="already-count-num">{{finishCourseCount}}</text> 门课程</text>
+      </van-col>
+
+      <!--第三行文字“今天总目标”-->
+      <van-col class="today-total-block">
+        <van-icon name="todo-list" color="#363640" size="32rpx"></van-icon>
+        <text class="today-total-font">目前学习中：</text>
+        <text class="current-learn">{{currentCourse}} </text>
+      </van-col>
+    </van-row>
+  </van-row>
+</van-transition>
+
+<van-row custom-class="tab-block">
+  <van-tabs active="{{ 0 }}" bind:change="onTabChange" nav-class="right-nav" tab-class="tab-class" tab-active-class="tab-active-class" sticky animated swipeable>
+    <van-tab title="课程">
+      <scroll-view scroll-y>
+        <i-card i-class="card"  title="戒烟的危害" content="简介" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" >
+         <view slot="content">
+            <van-button custom-class="play-button" type="primary"  size="mini" round>PLAY</van-button>
+         </view>
+        </i-card>
+      </scroll-view>
+    </van-tab>
+    <van-tab title="历史">
+      <view class="content">
+      </view>
+    </van-tab>
+  </van-tabs>
+</van-row>
