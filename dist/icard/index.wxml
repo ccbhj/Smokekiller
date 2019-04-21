@@ -1,0 +1,12 @@
+<view class="i-class i-card {{ full ? 'i-card-full' : '' }}">
+    <view class="i-class i-card-header">
+        <van-col class="i-card-header-content">
+            <van-col><image class="i-card-header-thumb" src="{{ thumb }}" mode="aspectFit" wx:if="{{ thumb }}" onTap="{}"/></van-col>
+          <van-col><text class="title-font">{{ title }}</text>  </van-col>
+          <van-row><text class="title-font" style='font-size:12px'>{{content}}</text> </van-row>
+        </van-col>
+        <view class="i-card-header-extra" wx:if="{{ extra }}">{{ extra }}</view>
+    </view>
+   <view class="i-class i-card-body"><slot name="content"></slot></view>
+    <!-- <view class="i-class i-card-footer"><slot name="footer"></slot></view> -->
+</view>
